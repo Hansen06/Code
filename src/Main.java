@@ -24,5 +24,7 @@ public class Main {
         System.out.println(solution001.Find(4,arrray));
         System.out.println(solution001.Find(12,arrray));
 
+
+        System.out.println("   " + Math.pow(2,3));
     }
 }
