@@ -32,7 +32,7 @@ public class Solution008 {
         while (curNode != null && curNode.next != null){
             nextNode = curNode.next;
             if (nextNode.val == curNode.val){
-                while(nextNode != null && nextNode.val == curNode.val){
+                while(nextNode != null && nextNode.val == curNode.val){ // nextNode != null 有移动指针的过程，需判断后面是否为空
                     nextNode = nextNode.next;
                 }
                 preNode.next = nextNode;
