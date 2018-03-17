@@ -7,7 +7,7 @@ package Offer;
  * F(n-1) = F(n-2) + ... + F(1)
  * 两式相减F(n) = 2F(n-1)
  */
-public class Solution004 {
+public class Solution004_JumpFloorII {
 
     public static int JumpFloorII(int target) {
         if(target == 0){

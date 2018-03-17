@@ -1,4 +1,4 @@
-import Offer.Solution001;
+import Offer.Solution001_Find;
 
 import java.util.Random;
 
@@ -20,7 +20,7 @@ public class Main {
         System.out.println(Math.ceil(2.5));
 
         int[][] arrray = {{1,2,5},{3,4,6},{7,8,9}};
-        Solution001 solution001 = new Solution001();
+        Solution001_Find solution001 = new Solution001_Find();
         System.out.println(solution001.Find(4,arrray));
         System.out.println(solution001.Find(12,arrray));
 

@@ -9,7 +9,7 @@ import java.util.List;
  * 例如，链表1->2->3->3->4->4->5
  * 处理后为 1->2->5
  */
-public class Solution008 {
+public class Solution008_deleteDuplication {
 
     public static class ListNode{
         int val;

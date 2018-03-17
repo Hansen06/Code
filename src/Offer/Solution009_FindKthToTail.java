@@ -2,7 +2,10 @@ package Offer;
 
 import java.util.ArrayList;
 
-public class Solution009 {
+/**
+ * 输入一个链表，输出该链表中倒数第k个结点。
+ */
+public class Solution009_FindKthToTail {
 
     public static class ListNode{
         int val;
@@ -36,6 +39,31 @@ public class Solution009 {
         return kNode;
     }
 
+    public static ListNode FindKthToTail1(ListNode head,int k) {
+
+        if(head == null || k < 1){
+            return null;
+        }
+
+        ListNode fNode = head;
+        ListNode sNode = head;
+        int i = 1;
+        while(i < k){
+            if(fNode.next != null){
+                fNode = fNode.next;
+                i++;
+            }else{                    //k的长度大于链表长度
+                return null;
+            }
+
+        }
+        while(fNode.next != null){
+            fNode = fNode.next;
+            sNode = sNode.next;
+        }
+        return sNode;
+    }
+
     public static void main(String[] args) {
         ListNode head = new ListNode(1);
         ListNode node1 = new ListNode(2);
@@ -53,6 +81,12 @@ public class Solution009 {
 
         ListNode node = FindKthToTail(head,4);
         System.out.println(node.val);
+
+        ListNode node_ = FindKthToTail1(head,4);
+        if(node_ != null){
+            System.out.println(node_.val);
+        }
+
 
     }
 }

@@ -4,7 +4,7 @@ package Offer;
  * 输入一个链表，反转链表后，输出链表的所有元素。
  */
 
-public class Solution005 {
+public class Solution005_Reverse_Linked_List {
 
     public static class ListNode {
         int val;
@@ -63,21 +63,21 @@ public class Solution005 {
             return null;
         }
 
-        ListNode pre = null;
+        ListNode newHead = null;
         ListNode next = null;
         ListNode temp = head;
         while(temp != null){
             next = temp.next;
-            temp.next = pre;
-            pre = temp;
+            temp.next = newHead;
+            newHead = temp;
             temp = next;
         }
 
-        for (ListNode q = pre; q != null; q = q.next){
-            System.out.println(q.val);
-        }
+//        for (ListNode q = newHead; q != null; q = q.next){
+//            System.out.println(q.val);
+//        }
 
-        return pre;
+        return newHead;
     }
 
     public static void main(String[] args) {
@@ -109,6 +109,21 @@ public class Solution005 {
 
         System.out.println("------------------------");
         ListNode list1 = ReverseList1(head);
+
+
+        System.out.println("-----------------------");
+
+        ListNode node01 = new ListNode(1);
+        ListNode node02 = new ListNode(2);
+
+        node01.next = node02;
+        node02.next = null;
+
+        ListNode node111 = ReverseList1(node01);
+        while(node111 != null){
+            System.out.println(node111.val);
+            node111 = node111.next;
+        }
 
     }
 

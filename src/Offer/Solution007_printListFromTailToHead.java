@@ -7,7 +7,7 @@ import java.util.Stack;
 /**
  * 输入一个链表，从尾到头打印链表每个节点的值。
  */
-public class Solution007 {
+public class Solution007_printListFromTailToHead {
 
     public static class ListNode{
         int val;

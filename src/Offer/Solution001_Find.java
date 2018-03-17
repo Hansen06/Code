@@ -9,7 +9,7 @@ package Offer;
  * 判断数组中是否含有该整数。
  */
 
-public class Solution001 {
+public class Solution001_Find {
 
     public boolean Find(int target, int [][] array) {
         int col = array[0].length - 1;
