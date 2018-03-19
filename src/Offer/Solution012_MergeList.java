@@ -80,7 +80,7 @@ public class Solution012_MergeList {
         ListNode node31 = new ListNode(8);
         ListNode node41 = new ListNode(10);
 
-        head2.next = node1;
+        head2.next = node11;
         node11.next = node21;
         node21.next = node31;
         node31.next = node41;
