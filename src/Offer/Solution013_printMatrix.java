@@ -78,41 +78,31 @@ public class Solution013_printMatrix {
     public static void main(String[] args) {
 
         int[][] matrix = {{1,2,3,4},{5,6,7,8},{9,10,11,12},{13,14,15,16}};
-//        System.out.println(matrix.length);
-//        System.out.println(matrix[0].length);
-//
-//        for (int i = 0; i < matrix.length; i++) {
-//            System.out.println(matrix[0][i]);
-//        }
 
-//        ArrayList<Integer> list = new ArrayList<Integer>();
-//        list = printMatrix(matrix);
-//        for (int value : list) {
-//            System.out.println(value);
-//        }
-//
-//        System.out.println("----------------");
-//        int[][] matrix1 = {{1}};
-//        System.out.println(matrix1.length);
-//        System.out.println(matrix1[0].length);
-//
-//        System.out.println("------------");
-//        ArrayList<Integer> list1 = new ArrayList<Integer>();
-//        list1 = printMatrix(matrix1);
-//        for (int value1 : list1) {
-//            System.out.println(value1);
-//        }
-//
-//
-//        System.out.println("========================");
-//        int[][] matrix2 = {{1,2},{3,4},{5,6},{7,8},{9,10}};
-//        ArrayList<Integer> list2 = new ArrayList<Integer>();
-//        list2 = printMatrix(matrix2);
-//        for (int value1 : list2) {
-//            System.out.println(value1);
-//        }
-//
-//        System.out.println("===============================");
+        ArrayList<Integer> list = new ArrayList<Integer>();
+        list = printMatrix(matrix);
+        for (int value : list) {
+            System.out.println(value);
+        }
+
+        System.out.println("----------------");
+        int[][] matrix1 = {{1}};
+        ArrayList<Integer> list1 = new ArrayList<Integer>();
+        list1 = printMatrix(matrix1);
+        for (int value1 : list1) {
+            System.out.println(value1);
+        }
+
+
+        System.out.println("========================");
+        int[][] matrix2 = {{1,2},{3,4},{5,6},{7,8},{9,10}};
+        ArrayList<Integer> list2 = new ArrayList<Integer>();
+        list2 = printMatrix(matrix2);
+        for (int value1 : list2) {
+            System.out.println(value1);
+        }
+
+        System.out.println("===============================");
         int[][] matrix3 = {{1,2,3,4,5},{6,7,8,9,10},{11,12,13,14,15,16}};
         ArrayList<Integer> list3 = new ArrayList<Integer>();
         list3 = printMatrix(matrix3);
