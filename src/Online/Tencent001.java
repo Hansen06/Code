@@ -2,14 +2,14 @@ package Online;
 
 import java.util.Scanner;
 
-public class Main001 {
+public class Tencent001 {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int t = sc.nextInt();
 
-        int[] x = new int[4];
-        int[] y = new int[4];
+        int[] x = new int[t];
+        int[] y = new int[t];
 
         for (int i = 0; i < t; i++) {
             for (int j = 0; j < 4; j++) {
