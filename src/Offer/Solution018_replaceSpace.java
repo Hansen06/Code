@@ -38,10 +38,29 @@ public class Solution018_replaceSpace {
         return str.toString();
     }
 
+
+    //辅助空间O(n)
+    public static String replaceSpace1(StringBuffer str){
+        if(str==null){
+            return null;
+        }
+        StringBuilder newStr = new StringBuilder();
+        for(int i=0;i<str.length();i++){
+            if(str.charAt(i)==' '){
+                newStr.append('%');
+                newStr.append('2');
+                newStr.append('0');
+            }else{
+                newStr.append(str.charAt(i));
+            }
+        }
+        return newStr.toString();
+    }
+
     public static void main(String[] args) {
 
         StringBuffer str = new StringBuffer("we are happy");
-        String resulut = replaceSpace(str);
+        String resulut = replaceSpace1(str);
         System.out.println(resulut);
     }
 }
