@@ -26,5 +26,10 @@ public class Main {
 
 
         System.out.println("   " + Math.pow(2,3));
+
+
+        System.out.println("++++++++++++++++++++");
+        int i = -2000000000;
+        System.out.println(i >>> 30);
     }
 }
