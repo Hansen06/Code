@@ -60,7 +60,7 @@ public class Solution018_replaceSpace {
     public static void main(String[] args) {
 
         StringBuffer str = new StringBuffer("we are happy");
-        String resulut = replaceSpace1(str);
+        String resulut = replaceSpace(str);
         System.out.println(resulut);
     }
 }

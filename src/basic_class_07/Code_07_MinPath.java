@@ -11,19 +11,20 @@ public class Code_07_MinPath {
 
     private static int process(int[][] matrx, int i, int j) {
 
-        //base case 结束条件
+        //base case 结束条件，到达最后一个位置
         if (i == matrx.length - 1 && j == matrx[0].length - 1) {
             return matrx[i][j];
         }
 
+        //到达最后一行
         if (i == matrx.length - 1) {
-            return matrx[i][j] + process(matrx, i, j + 1);
+            return matrx[i][j] + process(matrx, i, j + 1);//只能往左走
         }
+        //到达最后一列
         if (j == matrx[0].length - 1) {
-            return matrx[i][j] + process(matrx, i + 1, j);
+            return matrx[i][j] + process(matrx, i + 1, j);//只能往下走
         }
-        return matrx[i][j] + Math.min(process(matrx, i, j + 1), process(matrx, i + 1, j));
-
+        return matrx[i][j] + Math.min(process(matrx, i, j + 1), process(matrx, i + 1, j));//选择(i+1,j)和(i,j+1)中最小的那个-
     }
 
     static HashMap<String, Integer> cache = new HashMap<>();
@@ -71,7 +72,11 @@ public class Code_07_MinPath {
         String key = String.valueOf(i) + "_" + String.valueOf(j);
         cache.put(key, result);
         return result;
+    }
 
+    public static void main(String[] args) {
+        int[][] martix = {{1,3,2},{0,4,3},{1,2,3}};
+        System.out.println(minPath(martix));
     }
 
 }
