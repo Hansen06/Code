@@ -12,8 +12,21 @@ public class Solution022_Add {
         return num1;
     }
 
+
+    public static int minus(int first,int second)//first为减数， second为被减数
+    {
+        int sum = first ^ second;
+        int carry = (sum & second) << 1;
+        while(carry != 0){
+            sum = sum ^ carry;
+            carry = (sum & carry) << 1;
+        }
+        return sum;
+    }
+
     public static void main(String[] args) {
 
         System.out.println(Add(2,3));
+        System.out.println(minus(4,3));
     }
 }
