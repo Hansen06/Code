@@ -6,6 +6,7 @@ import java.util.Comparator;
 public class Solution_023_PrintMinNumber {
 
 
+    private int a  = 0;
     public static void quickSort(char[] arr){
         if (arr == null || arr.length < 2){
             return;
