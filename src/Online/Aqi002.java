@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 public class Aqi002 {
 
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         while (sc.hasNextInt()){
