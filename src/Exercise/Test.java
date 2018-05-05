@@ -1,11 +1,29 @@
 package Exercise;
 
 public class Test {
-    public static void main(String[] args) {
-        String str = "abc";
-        String[] arr = str.split("");
-        for (int i = 0; i < arr.length; i++) {
-            System.out.println(arr[i]);
+
+    static class Animal{
+        int height = 0;
+
+        public void eat(){
+            System.out.println("animal eat");
         }
     }
+
+    static class Dog extends Animal{
+        int height = 2;
+        public void eat(){
+            System.out.println("Dog");
+        }
+    }
+
+    public static void main(String[] args) {
+
+        Animal a = new Dog();
+        System.out.println(a.height + ":");
+        a.eat();
+
+    }
+
 }
+
