@@ -3,7 +3,7 @@ package Offer;
 import java.util.Arrays;
 import java.util.Comparator;
 
-public class Solution_023_PrintMinNumber {
+public class Solution023_PrintMinNumber {
 
 
     private int a  = 0;
