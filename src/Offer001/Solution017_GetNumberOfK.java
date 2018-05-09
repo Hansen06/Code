@@ -1,4 +1,4 @@
-package Offer;
+package Offer001;
 
 /**
  * 统计一个数字在排序数组中出现的次数。

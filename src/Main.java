@@ -1,8 +1,4 @@
-import Design_Pattern.TicketMaker;
 import Design_Pattern.TicketMaker1;
-import Offer.Solution001_Find;
-
-import java.util.Random;
 
 public class Main {
 

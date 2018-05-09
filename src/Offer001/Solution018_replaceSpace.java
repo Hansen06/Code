@@ -1,4 +1,4 @@
-package Offer;
+package Offer001;
 
 /**
  * 请实现一个函数，将一个字符串中的空格替换成“%20”。

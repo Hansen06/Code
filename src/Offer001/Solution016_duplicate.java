@@ -1,4 +1,4 @@
-package Offer;
+package Offer001;
 
 /**
  * 在一个长度为n的数组里的所有数字都在0到n-1的范围内。

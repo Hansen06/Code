@@ -1,4 +1,4 @@
-package Offer;
+package Offer001;
 
 import java.util.HashMap;
 
@@ -31,6 +31,32 @@ public class Solution014_FirstNotRepeatingChar {
         return -1;
     }
 
+    public static int FirstNotRepeatingChar1(String str) {
+
+        if (str.length() == 0){
+            return -1;
+        }
+        HashMap<Character, Integer> map = new HashMap<>();
+        char[] chars = str.toCharArray();
+        int len = chars.length;
+        for (int i = 0; i < len; i++) {
+            if (map.containsKey(chars[i])){
+                char ch = chars[i];
+                Integer num = map.get(ch);
+                map.put(ch, ++num);
+            }else{
+                map.put(chars[i], 1);
+            }
+        }
+        for (int i = 0; i < len; i++) {
+            if (map.get(chars[i]) == 1){
+                return i;
+            }
+        }
+
+        return -1;
+    }
+
     public static void main(String[] args) {
 
         String str = "abaccdeff";
@@ -41,6 +67,8 @@ public class Solution014_FirstNotRepeatingChar {
 
         int index = FirstNotRepeatingChar(str);
         System.out.println(index);
+        System.out.println(FirstNotRepeatingChar1(str));
+
 
     }
 }

@@ -1,7 +1,6 @@
-package Offer;
+package Offer001;
 
 import java.util.ArrayList;
-import java.util.Scanner;
 
 /**
  * 请实现一个函数用来找出字符流中第一个只出现一次的字符。

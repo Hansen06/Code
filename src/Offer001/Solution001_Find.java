@@ -1,4 +1,4 @@
-package Offer;
+package Offer001;
 
 /**
  * 在一个二维数组中，
