@@ -1,4 +1,4 @@
-package Offer;
+package Offer002;
 
 import utils.Partition;
 

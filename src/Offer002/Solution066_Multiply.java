@@ -1,6 +1,9 @@
-package Offer;
+package Offer002;
 
-public class Solution022_Multiply {
+/**
+ * 构建乘积数组
+ */
+public class Solution066_Multiply {
 
     public static int[] multiply(int[] A){
         if (A == null || A.length < 2){

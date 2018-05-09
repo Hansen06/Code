@@ -1,8 +1,11 @@
-package Offer;
+package Offer002;
 
 import java.util.Comparator;
 import java.util.PriorityQueue;
 
+/**
+ * ]数据流中的中位数
+ */
 public class Solution024_GetMedian {
 
     private static PriorityQueue<Integer> maxHeap = new PriorityQueue<Integer>(new MaxHeapComparator());
@@ -63,7 +66,7 @@ public class Solution024_GetMedian {
         }
     }
 
-    public static class MinHeapComparator implements Comparator<Integer>{
+    public static class MinHeapComparator implements Comparator<Integer> {
 
         @Override
         public int compare(Integer o1, Integer o2) {

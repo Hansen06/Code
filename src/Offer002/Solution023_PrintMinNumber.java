@@ -1,4 +1,4 @@
-package Offer;
+package Offer002;
 
 import java.util.Arrays;
 import java.util.Comparator;
