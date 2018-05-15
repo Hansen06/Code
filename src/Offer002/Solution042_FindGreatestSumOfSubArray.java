@@ -1,7 +1,7 @@
 package Offer002;
 
 /**
- * 连续子数组的最大和
+ * 连续子数组的最大和 s
  */
 public class Solution042_FindGreatestSumOfSubArray {
 

@@ -1,7 +1,7 @@
 package Offer002;
 
 /**
- * 构建乘积数组
+ * 构建乘积数组 s
  */
 public class Solution066_Multiply {
 
