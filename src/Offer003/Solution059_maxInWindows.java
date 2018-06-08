@@ -2,6 +2,7 @@ package Offer003;
 
 import java.util.ArrayDeque;
 import java.util.ArrayList;
+import java.util.LinkedList;
 
 /**
  * 滑动窗口的最大值
@@ -28,6 +29,12 @@ public class Solution059_maxInWindows {
         return result;
     }
 
+    /**
+     * 有问题
+     * @param num
+     * @param size
+     * @return
+     */
     public static ArrayList<Integer> maxInWindows1(int[] num, int size) {
         ArrayList<Integer> result = new ArrayList<>();
 
@@ -62,24 +69,30 @@ public class Solution059_maxInWindows {
     public static ArrayList<Integer> maxInWindows2(int[] num, int size) {
         ArrayList<Integer> result = new ArrayList<>();
 
-        if (num == null || num.length < size || size == 0) {
+        if(num == null || num.length == 0 || size == 0 || size > num.length) {
             return result;
         }
-        int begin;
-        ArrayDeque<Integer> q = new ArrayDeque<>();
-        for (int i = 0; i < num.length; i++) {
-            begin = i - size + 1;
-            if (q.isEmpty())
-                q.add(i);
-            else if (begin > q.peekFirst())
-                q.pollFirst();
 
-            while ((!q.isEmpty()) && num[q.peekLast()] <= num[i])
-                q.pollLast();
-            q.add(i);
-            if (begin >= 0)
-                result.add(num[q.peekFirst()]);
+        LinkedList<Integer> queue = new LinkedList<>();
 
+        for(int i = 0; i < num.length; i++) {
+            if(!queue.isEmpty()){
+                // 如果队列头元素不在滑动窗口中了，就删除头元素
+                if(i >= queue.peek() + size) {
+                    queue.pop();
+                }
+
+                // 如果当前数字大于队列尾，则删除队列尾，直到当前数字小于等于队列尾，或者队列空
+                while(!queue.isEmpty() && num[i] >= num[queue.getLast()]) {
+                    queue.removeLast();
+                }
+            }
+            queue.offer(i); // 入队列
+
+            // 滑动窗口经过三个元素，获取当前的最大值，也就是队列的头元素
+            if(i + 1 >= size) {
+                result.add(num[queue.peek()]);
+            }
         }
         return result;
     }

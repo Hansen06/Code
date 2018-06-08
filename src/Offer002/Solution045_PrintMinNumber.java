@@ -67,6 +67,10 @@ public class Solution045_PrintMinNumber {
             public int compare(String s1, String s2) {
                 String tmp1 = s1 + s2;
                 String tmp2 = s2 + s1;
+
+                System.out.println("temp1: " + tmp1);
+                System.out.println("temp2: " + tmp2);
+                System.out.println(tmp1.compareTo(tmp2));
                 return tmp1.compareTo(tmp2);
             }
         });
@@ -78,7 +82,8 @@ public class Solution045_PrintMinNumber {
     }
 
     public static void main(String[] args) {
-        int[] arr = {321};
+        int[] arr = {3,32,321};
         System.out.println(PrintMinNumber(arr));
+
     }
 }
