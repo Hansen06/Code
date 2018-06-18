@@ -43,6 +43,9 @@ public class Solution039_MoreThanHalfNum {
                 time--;
             }
         }
+
+
+        //检查是否达到一半
         int num = 0;
         for (int i = 0; i < array.length; i++) {
             if (array[i] == result){
@@ -77,6 +80,7 @@ public class Solution039_MoreThanHalfNum {
         }
         result = array[mid];
 
+        //检查是否达到一半
         int num = 0;
         for (int i = 0; i < array.length; i++) {
             if (array[i] == result){
