@@ -35,8 +35,8 @@ public class Solution007_reConstructBinaryTree {
 
         for (int i = inStart; i <= inEnd; i++) {
             if (in[i] == pre[preStart]){
-                root.left = ConstructCore(preStart + 1, preStart + i -inStart, inStart, i - 1, pre, in);
-                root.right = ConstructCore(i - inStart + preStart + 1, preEnd, i + 1, inEnd, pre, in);
+                root.left = ConstructCore(preStart + 1, preStart + (i -inStart), inStart, i - 1, pre, in); //i - inStart = 左子树大小
+                root.right = ConstructCore((i - inStart) + preStart + 1, preEnd, i + 1, inEnd, pre, in);
                 break;
             }
         }
