@@ -1,5 +1,8 @@
 package Offer003;
 
+/**
+ * 二叉树的下一个结点
+ */
 public class Solution008_GetNext {
 
 
@@ -14,23 +17,23 @@ public class Solution008_GetNext {
         }
     }
 
-    public TreeLinkNode GetNext(TreeLinkNode pNode){
+    public TreeLinkNode GetNext(TreeLinkNode pNode) {
 
-        if (pNode == null){
+        if (pNode == null) {
             return null;
         }
 
         TreeLinkNode pNext = null;
-        if(pNode.right != null){
+        if (pNode.right != null) {
             TreeLinkNode pRight = pNode.right;
-            while (pRight.left != null){
+            while (pRight.left != null) {
                 pRight = pRight.left;
             }
             pNext = pRight;
-        }else if (pNode.next != null){
+        } else if (pNode.next != null) {
             TreeLinkNode pCur = pNode;
             TreeLinkNode pParent = pNode.next;
-            while (pParent != null && pCur == pParent.right){
+            while (pParent != null && pCur == pParent.right) {
                 pCur = pParent;
                 pParent = pParent.next;
             }
