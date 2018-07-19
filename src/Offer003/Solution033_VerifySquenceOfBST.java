@@ -23,11 +23,13 @@ public class Solution033_VerifySquenceOfBST {
         }
         int root = sequence[end];
         int i = start;
+
 //        for (; i <= end; i++) {
 //            if (sequence[i] > root){
 //                break;
 //            }
 //        }
+
         while(sequence[i] < root){
             ++i;
         }
