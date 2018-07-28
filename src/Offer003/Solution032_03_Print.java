@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Stack;
 
 /**
- * 把二叉树打印成多行
+ * 把二叉树打印zigzag
  */
 
 public class Solution032_03_Print {
