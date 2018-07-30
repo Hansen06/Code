@@ -1,8 +1,7 @@
 package samsang;
 
-import java.util.Stack;
 import utils.Array_To_Stack_Queue.ArrayStack;
-public class GetComNode {
+public class Common_Ancestor {
 
     public static int[] getNodePath(int[] arr, int edges_num, int pNode){
 
