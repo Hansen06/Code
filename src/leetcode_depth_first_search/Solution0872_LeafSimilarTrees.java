@@ -87,6 +87,7 @@ public class Solution0872_LeafSimilarTrees {
 
         ArrayList<Integer> list = new ArrayList<>();
         list = getLeafNode(root);
+
         for (int i = 0; i < list.size(); i++){
             System.out.print(list.get(i) + " ");
         }
