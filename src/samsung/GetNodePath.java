@@ -1,4 +1,4 @@
-package samsang;
+package samsung;
 
 import java.util.ArrayList;
 import java.util.Stack;

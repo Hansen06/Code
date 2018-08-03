@@ -1,4 +1,4 @@
-package samsang;
+package samsung;
 
 public class Order_of_task {
 

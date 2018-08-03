@@ -1,4 +1,4 @@
-package samsang;
+package samsung;
 
 public class Solution_20180728_bfs_cut_time {
 

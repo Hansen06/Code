@@ -1,4 +1,4 @@
-package samsang;
+package samsung;
 
 import utils.Array_To_Stack_Queue.ArrayStack;
 public class Common_Ancestor {
