@@ -35,6 +35,8 @@ public class Common_Ancestor {
             parent[k] = -1;
         }
 
+
+
         for (int j = 0; j < from.length; j++) {
             int node = from[j];
             if (left[node] == -1){
