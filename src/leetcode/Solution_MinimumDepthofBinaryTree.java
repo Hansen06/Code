@@ -1,4 +1,4 @@
-package LeetCode;
+package leetcode;
 
 /**
  * 	Minimum Depth of Binary Tree

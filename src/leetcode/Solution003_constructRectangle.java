@@ -1,4 +1,4 @@
-package LeetCode;
+package leetcode;
 
 /**
  * 构建矩形满足：
