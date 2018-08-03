@@ -69,8 +69,6 @@ public class Solution0559_MaximumDepthofNaryTree {
 
         Node root = new Node(1,list1);
 
-
-
         maxDepth(root);
     }
 
