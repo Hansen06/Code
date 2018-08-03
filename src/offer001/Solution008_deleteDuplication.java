@@ -1,4 +1,4 @@
-package Offer001;
+package offer001;
 
 /**
  * 在一个排序的链表中，存在重复的结点，

@@ -1,4 +1,4 @@
-package Offer001;
+package offer001;
 
 /**
  * 大家都知道斐波那契数列，现在要求输入一个整数n，

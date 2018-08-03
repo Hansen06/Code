@@ -1,4 +1,4 @@
-package Offer001;
+package offer001;
 
 /**
  * 二进制为1的个数

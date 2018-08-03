@@ -1,4 +1,4 @@
-package Offer001;
+package offer001;
 
 /**
  * 一个整型数组里除了两个数字之外，其他的数字都出现了两次。

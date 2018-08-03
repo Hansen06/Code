@@ -1,4 +1,4 @@
-package Offer001;
+package offer001;
 
 /**
  * 数组中重复的数字

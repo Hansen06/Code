@@ -1,4 +1,4 @@
-package Offer001;
+package offer001;
 
 /**
  * 二维数组中的查找
