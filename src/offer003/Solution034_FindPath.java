@@ -8,7 +8,7 @@ import java.util.Stack;
  */
 public class Solution034_FindPath {
 
-    public class TreeNode {
+    public static class TreeNode {
         int val = 0;
         TreeNode left = null;
         TreeNode right = null;
@@ -19,7 +19,7 @@ public class Solution034_FindPath {
         }
     }
 
-    public ArrayList<ArrayList<Integer>> FindPath(TreeNode root, int target) {
+    public static ArrayList<ArrayList<Integer>> FindPath(TreeNode root, int target) {
         ArrayList<ArrayList<Integer>> pathRe = new ArrayList<ArrayList<Integer>>();
         if (root == null){
             return pathRe;
@@ -29,7 +29,7 @@ public class Solution034_FindPath {
         return pathRe;
     }
 
-    private void FindPath(TreeNode root, int target, ArrayList<ArrayList<Integer>> pathRe, Stack<Integer> stack) {
+    private static void FindPath(TreeNode root, int target, ArrayList<ArrayList<Integer>> pathRe, Stack<Integer> stack) {
 
         if (root == null){
             return;
@@ -58,6 +58,15 @@ public class Solution034_FindPath {
     }
 
     public static void main(String[] args) {
-
+        TreeNode root = new TreeNode(1);
+        TreeNode node1 = new TreeNode(2);
+        TreeNode node2 = new TreeNode(3);
+        TreeNode node3 = new TreeNode(4);
+        TreeNode node4 = new TreeNode(5);
+        root.left = node1;
+        root.right = node2;
+        node1.left = node3;
+        node1.right = node4;
+        FindPath(root,4);
     }
 }
