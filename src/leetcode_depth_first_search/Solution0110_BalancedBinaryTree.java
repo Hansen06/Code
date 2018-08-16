@@ -18,12 +18,16 @@ public class Solution0110_BalancedBinaryTree {
         if (root == null){
             return true;
         }
-        int left = hightTree(root);
-        int right = hightTree(root);
-        if ((left-right) > 1 && (right - left) < -1){
+        int left = hightTree(root.left);
+        int right = hightTree(root.right);
+//        if (((left-right) > 1) || ((right - left) < -1)){
+//                return false;
+//        }
+
+        if (Math.abs(left-right) > 1){
             return false;
         }
-        return true;
+        return isBalanced(root.left) && isBalanced(root.right);
     }
 
     public int hightTree(TreeNode root) {
