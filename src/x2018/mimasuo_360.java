@@ -3,7 +3,7 @@ package x2018;
 import java.util.Scanner;
 
 /**
- * 赛码 360 最强大脑
+ * 赛码 360 密码锁
  */
 public class mimasuo_360 {
 
