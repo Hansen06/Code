@@ -49,7 +49,7 @@ public class Meituan001 {
         int result = 0;
         for (int i = 1; i <= m; i++) {
             for (int j = 1; j <= n; j++) {
-//                System.out.println(get_gcd(i,j) + arr[get_gcd(i,j)]);
+//                System.out.println(get_gcd(i,j) + arr_360003[get_gcd(i,j)]);
 
                 result += arr[get_gcd(i,j)-1];
             }

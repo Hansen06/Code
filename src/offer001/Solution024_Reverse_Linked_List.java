@@ -38,7 +38,7 @@ public class Solution024_Reverse_Linked_List {
 
 //        ListNode p = head;
 //        while (p != null){
-//            arr[i++] = p.val;
+//            arr_360003[i++] = p.val;
 //            p = p.next;
 //        }
 

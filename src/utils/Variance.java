@@ -26,7 +26,7 @@ public class Variance {
     }
 
     public static void main(String[] args) {
-//        int[][] arr = {{2,3},{5,4},{9,6},{4,7},{8,1},{7,2}};
+//        int[][] arr_360003 = {{2,3},{5,4},{9,6},{4,7},{8,1},{7,2}};
         int[][] arr1 = {{2,3},{5,4},{4,7}};
         int[][] arr2 = {{9,6},{8,1}};
         double[] result1 = getVariance(arr1);
