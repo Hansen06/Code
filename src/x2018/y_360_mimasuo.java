@@ -5,7 +5,7 @@ import java.util.Scanner;
 /**
  * 赛码 360 密码锁
  */
-public class mimasuo_360 {
+public class y_360_mimasuo {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);

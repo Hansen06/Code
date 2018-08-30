@@ -3,7 +3,7 @@ package x2018;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class square_360001 {
+public class y_360_square {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int t = sc.nextInt();

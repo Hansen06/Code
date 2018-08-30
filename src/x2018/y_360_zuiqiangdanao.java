@@ -5,7 +5,7 @@ import java.util.Scanner;
 /**
  * 赛码 360 最强大脑
  */
-public class zuiqiangdanao_360 {
+public class y_360_zuiqiangdanao {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);

@@ -60,9 +60,9 @@ public class Solution050_FirstNotRepeatingChar {
     public static void main(String[] args) {
 
         String str = "abaccdeff";
-//        String[] arr_360003 = str.split("");
-//        for (int i = 0; i < arr_360003.length; i++) {
-//            System.out.println(arr_360003[i]);
+//        String[] y_360_arr = str.split("");
+//        for (int i = 0; i < y_360_arr.length; i++) {
+//            System.out.println(y_360_arr[i]);
 //        }
 
         int index = FirstNotRepeatingChar(str);

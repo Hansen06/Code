@@ -203,16 +203,16 @@ public class Common_Ancestor {
         System.out.println(getTreeSize(arr,12,com));
 
 //        int[] path = new int[edges_num];
-//        getNodePath(arr_360003, vertices_num, edges_num, 8, path);
+//        getNodePath(y_360_arr, vertices_num, edges_num, 8, path);
 
 //        int[] right = new int[vertices_num];
 //        int[] left = new int[vertices_num];
 //        int i = 0;
 //        int index = 0;
 //        while (i < edges_num * 2) {
-//            right[index] = arr_360003[i];
+//            right[index] = y_360_arr[i];
 //            i++;
-//            left[index] = arr_360003[i];
+//            left[index] = y_360_arr[i];
 //            i++;
 //            index++;
 //        }

@@ -47,12 +47,12 @@ public class Test_58001 {
 //        Scanner sc = new Scanner(System.in);
 //        String input = sc.next();
 //
-//        char[] arr_360003 = input.toCharArray();
+//        char[] y_360_arr = input.toCharArray();
 //
 //        int[] arr_num = new int[26];
 //
-//        for (int i = 0; i < arr_360003.length; i++) {
-//            arr_num[arr_360003[i]-'a']++;
+//        for (int i = 0; i < y_360_arr.length; i++) {
+//            arr_num[y_360_arr[i]-'a']++;
 //        }
 //
 //        for (int i = 0; i < arr_num.length; i++) {

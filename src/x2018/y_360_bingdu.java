@@ -5,7 +5,7 @@ import java.util.Scanner;
 /**
  * 赛码 360 病毒
  */
-public class bingdu_360 {
+public class y_360_bingdu {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);

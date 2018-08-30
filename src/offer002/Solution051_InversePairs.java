@@ -55,7 +55,7 @@ public class Solution051_InversePairs {
     public static void main(String[] args) {
         int[] arr = {1,2,3,4,5,6,7,0};
         int[] arr1 = {7,5,6,4};
-//        System.out.println(InversePairs(arr_360003));
+//        System.out.println(InversePairs(y_360_arr));
         System.out.println(InversePairs(arr1));
         System.out.println();
         for (int num : arr1) {
