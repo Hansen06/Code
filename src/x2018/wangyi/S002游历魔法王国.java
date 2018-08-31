@@ -1,4 +1,4 @@
-package company.wangyi;
+package x2018.wangyi;
 
 import java.util.Scanner;
 
