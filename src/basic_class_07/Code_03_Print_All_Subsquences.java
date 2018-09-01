@@ -4,20 +4,20 @@ public class Code_03_Print_All_Subsquences {
 
 	public static void printAllSubsquence(String str) {
 		char[] chs = str.toCharArray();
-		process(chs, 0);
+		f(chs, 0, "");
 	}
 
-	public static void process(char[] chs, int i) {
-		if (i == chs.length) {
-			System.out.println(String.valueOf(chs));
+	public static void f(char[] ch, int index, String pre){
+		if (index == ch.length){
+			if (!pre.equals("")){
+				System.out.println(pre);
+			}
 			return;
 		}
-		process(chs, i + 1);
-		char tmp = chs[i];
-		chs[i] = 0;
-		process(chs, i + 1);
-		chs[i] = tmp;
+		f(ch, index+1, pre + String.valueOf(ch[index]));
+		f(ch, index+1, pre);
 	}
+
 
 	public static void main(String[] args) {
 		String test = "abc";
