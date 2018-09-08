@@ -3,7 +3,7 @@ package x2018;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class ali {
+public class ali010 {
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
