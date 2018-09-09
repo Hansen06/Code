@@ -1,13 +1,15 @@
 package x2018;
 
+import Online.Te;
+
 import java.util.Arrays;
 import java.util.Vector;
 
 public class Test {
     public static void main(String[] args) {
-        char[] arr = {'a','b'};
-        System.out.println(new String(arr));
-        System.out.println(String.valueOf(arr));
+//        char[] arr = {'a','b'};
+//        System.out.println(new String(arr));
+//        System.out.println(String.valueOf(arr));
 
 //        String str = "8.9";
 //        String[] str1 = str.split("/.");
@@ -25,6 +27,20 @@ public class Test {
 //            System.out.println(strr[i]);
 //        }
 
+        System.out.println("A");
+        new Test();
+        new Test();
+    }
 
+    public Test(){
+        System.out.println("B");
+    }
+
+    {
+        System.out.println("C");
+    }
+
+    static {
+        System.out.println("D");
     }
 }
