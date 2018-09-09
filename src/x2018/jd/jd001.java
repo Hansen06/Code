@@ -7,6 +7,21 @@ import java.util.regex.*;
 
 public class jd001 {
 
+    public static boolean isIsomorphic1(String s, String t) {
+        if (s == null || t == null || s.length() != t.length()) {
+            return false;
+        }
+        int[] m1 = new int[256];
+        int[] m2 = new int[256];
+        int n = s.length();
+        for (int i = 0; i < n; ++i) {
+            if (m1[s.charAt(i)] != m2[t.charAt(i)])
+                return false;
+            m1[s.charAt(i)] = i + 1;
+            m2[t.charAt(i)] = i + 1;
+        }
+        return true;
+    }
 
     /*请完成下面这个函数，实现题目要求的功能
     当然，你也可以不按照下面这个模板来作答，完全按照自己的想法来 ^-^
@@ -16,33 +31,42 @@ public class jd001 {
         if (S == null || T == null){
             return 0;
         }
-        char[] ch1 = S.toCharArray();
-        char[] ch2 = T.toCharArray();
-        ArrayList<Character> list = new ArrayList<>();
-        for (int i = 0; i < ch2.length; i++) {
-            if (!list.contains(ch2[i])) {
-                list.add(ch2[i]);
-            }
-        }
-        int ch2_len = ch2.length;
-        for (int i = 0; i <= ch1.length - ch2_len; i++) {
-            ArrayList<Character> set = new ArrayList<>();
-            for (int j = i; j < i + ch2_len ; j++) {
-                if (!set.contains(ch1[j])) {
-                    set.add(ch1[j]);
-                }
-            }
-            if (set.size() == list.size()){
-                String cur = S.substring(i,i+ch2_len);
-                for (int j = 0; j < list.size(); j++) {
-                    cur = cur.replaceAll(String.valueOf(set.get(j)),String.valueOf(list.get(j)));
-                }
-                if (cur.equals(T)){
-                    res++;
-                }
+
+        int len = T.length();
+        for (int i = 0; i <= S.length() - T.length(); i++) {
+            if (isIsomorphic1(S.substring(i, i+len), T)){
+                res++;
             }
         }
         return res;
+
+//        char[] ch1 = S.toCharArray();
+//        char[] ch2 = T.toCharArray();
+//        ArrayList<Character> list = new ArrayList<>();
+//        for (int i = 0; i < ch2.length; i++) {
+//            if (!list.contains(ch2[i])) {
+//                list.add(ch2[i]);
+//            }
+//        }
+//        int ch2_len = ch2.length;
+//        for (int i = 0; i <= ch1.length - ch2_len; i++) {
+//            ArrayList<Character> set = new ArrayList<>();
+//            for (int j = i; j < i + ch2_len ; j++) {
+//                if (!set.contains(ch1[j])) {
+//                    set.add(ch1[j]);
+//                }
+//            }
+//            if (set.size() == list.size()){
+//                String cur = S.substring(i,i+ch2_len);
+//                for (int j = 0; j < list.size(); j++) {
+//                    cur = cur.replaceAll(String.valueOf(set.get(j)),String.valueOf(list.get(j)));
+//                }
+//                if (cur.equals(T)){
+//                    res++;
+//                }
+//            }
+//        }
+//        return res;
 
     }
     /******************************结束写代码******************************/
