@@ -24,7 +24,9 @@ public class bfs {
                 int left_num = matrix[cur_row][cur_col - 1];
                 if (!visited[cur_row][cur_col - 1] && left_num == 1) {
                     visited[cur_row][cur_col - 1] = true;
-                    bfs(matrix, cur_row, cur_col - 1);
+                    int[] p = {cur_row, cur_col - 1};
+                    queue.add(p);
+//                    bfs(matrix, cur_row, cur_col - 1);
                 }
             }
             //判断上方
@@ -32,7 +34,9 @@ public class bfs {
                 int top_num = matrix[cur_row - 1][cur_col];
                 if (!visited[cur_row - 1][cur_col] && top_num == 1) {
                     visited[cur_row - 1][cur_col] = true;
-                    bfs(matrix, cur_row - 1, cur_col);
+                    int[] p = {cur_row - 1, cur_col};
+                    queue.add(p);
+//                    bfs(matrix, cur_row - 1, cur_col);
                 }
             }
 
@@ -41,7 +45,9 @@ public class bfs {
                 int right_num = matrix[cur_row][cur_col + 1];
                 if (!visited[cur_row][cur_col + 1] && right_num == 1) {
                     visited[cur_row][cur_col + 1] = true;
-                    bfs(matrix, cur_row, cur_col + 1);
+                    int[] p = {cur_row, cur_col + 1};
+                    queue.add(p);
+//                    bfs(matrix, cur_row, cur_col + 1);
                 }
             }
 
@@ -50,19 +56,21 @@ public class bfs {
                 int down_num = matrix[cur_row + 1][cur_col];
                 if (!visited[cur_row + 1][cur_col] && down_num == 1) {
                     visited[cur_row + 1][cur_col] = true;
-                    bfs(matrix, cur_row + 1, cur_col);
+                    int[] p = {cur_row + 1, cur_col};
+                    queue.add(p);
+//                    bfs(matrix, cur_row + 1, cur_col);
                 }
             }
         }
     }
 
     public static void main(String[] args) {
-        int[][] matrix1 = {{1, 0, 0, 0},
+        int[][] matrix  = {{1, 0, 0, 0},
                             {0, 0, 0, 0},
                             {0, 0, 0, 1},
                             {0, 0, 0, 0}
                           };
-        int[][] matrix = {  {1, 0, 0, 1, 1},
+        int[][] matrix1 = {  {1, 0, 0, 1, 1},
                             {1, 0, 0, 1, 1},
                             {0, 0, 1, 0, 0},
                             {0, 0, 1, 0, 0},
