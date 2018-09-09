@@ -12,7 +12,7 @@ public class Solution0695_MaxAreaofIsland_dfs {
 
 
     /**
-     *dfs
+     *bfs
      */
     public static int maxAreaOfIsland(int[][] grid) {
         if (grid.length < 1){
