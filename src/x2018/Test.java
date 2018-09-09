@@ -1,6 +1,7 @@
 package x2018;
 
 import java.util.Arrays;
+import java.util.Vector;
 
 public class Test {
     public static void main(String[] args) {
@@ -16,13 +17,14 @@ public class Test {
 //            System.out.println(i + " " + (i & 1));
 //        }
 
-        String str = "周杰|周杰伦|刘德华|王力宏";
-        String str1 = "冰雨a|冰雨|北京欢迎你|七里香";
-        String[] strr = str1.split("\\|");
-        Arrays.sort(strr);
-        for (int i = 0; i < strr.length; i++) {
-            System.out.println(strr[i]);
-        }
+//        String str = "周杰|周杰伦|刘德华|王力宏";
+//        String str1 = "冰雨a|冰雨|北京欢迎你|七里香";
+//        String[] strr = str1.split("\\|");
+//        Arrays.sort(strr);
+//        for (int i = 0; i < strr.length; i++) {
+//            System.out.println(strr[i]);
+//        }
+
 
     }
 }
