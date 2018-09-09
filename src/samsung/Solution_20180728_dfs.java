@@ -1,5 +1,7 @@
 package samsung;
 
+import java.util.Stack;
+
 public class Solution_20180728_dfs {
 
     public static int count = 0;
@@ -9,43 +11,53 @@ public class Solution_20180728_dfs {
         if (matrix.length < 1 || step < 1 || row < 0 || col < 0){
             return;
         }
-        if (step == 0){
-            return;
-        }
-        step--;
-        count++;
+
         visited[row][col] = true;
-        int cur_num = matrix[row][col];
-        int[] can = can_get[cur_num - 1];
+        int[] cur_pos = {row, col};
+        Stack<int[]> stack = new Stack<>();
+        stack.push(cur_pos);
+        while (!stack.isEmpty() && step >= 0) {
+            count++;
+            step--;
+            int[] pos = stack.pop();
+            int cur_row = pos[0];
+            int cur_col = pos[1];
 
-        //判断左侧
-        if (col - 1 >= 0 && matrix[row][col-1] != 0){
-            int left_num = matrix[row][col - 1];
-            if (can_get[left_num-1][3] == 1 && can[2] == 1){
-                if (!visited[row][col-1]){
-                    visited[row][col-1] = true;
-                    dfs(matrix, row, col - 1, step, can_get);
+            int cur_num = matrix[cur_row][cur_col];
+            int[] can = can_get[cur_num - 1];
+
+            //判断左侧
+            if (cur_col - 1 >= 0 && matrix[cur_row][cur_col - 1] != 0) {
+                int left_num = matrix[cur_row][cur_col - 1];
+                if (can_get[left_num - 1][3] == 1 && can[2] == 1) {
+                    if (!visited[cur_row][cur_col - 1]) {
+                        visited[cur_row][cur_col - 1] = true;
+                        int[] p = {cur_row, cur_col - 1};
+                        stack.push(p);
+                    }
                 }
             }
-        }
-        //判断上方
-        if (row - 1 >= 0 && matrix[row-1][col] != 0){
-            int top_num = matrix[row-1][col];
-            if (can_get[top_num-1][1] == 1 && can[0] == 1) {
-                if (!visited[row-1][col]){
-                    visited[row-1][col] = true;
-                    dfs(matrix, row - 1, col, step, can_get);
+            //判断上方
+            if (cur_row - 1 >= 0 && matrix[cur_row - 1][cur_col] != 0) {
+                int top_num = matrix[cur_row - 1][cur_col];
+                if (can_get[top_num - 1][1] == 1 && can[0] == 1) {
+                    if (!visited[cur_row - 1][cur_col]) {
+                        visited[cur_row - 1][cur_col] = true;
+                        int[] p = {cur_row - 1, cur_col};
+                        stack.push(p);
+                    }
                 }
             }
-        }
 
-        //判断右侧
-        if (col + 1 < matrix[0].length && matrix[row][col + 1] != 0){
-            int right_num = matrix[row][col+1];
-            if (can_get[right_num-1][2] == 1 && can[3] == 1) {
-                if (!visited[row][col+1]){
-                    visited[row][col+1] = true;
-                    dfs(matrix, row, col + 1, step, can_get);
+            //判断右侧
+            if (cur_col + 1 < matrix[0].length && matrix[cur_row][cur_col + 1] != 0) {
+                int right_num = matrix[cur_row][cur_col + 1];
+                if (can_get[right_num - 1][2] == 1 && can[3] == 1) {
+                    if (!visited[cur_row][cur_col + 1]) {
+                        visited[cur_row][cur_col + 1] = true;
+                        int[] p = {cur_row, cur_col + 1};
+                        stack.push(p);
+                    }
                 }
             }
         }

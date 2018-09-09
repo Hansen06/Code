@@ -26,7 +26,6 @@ public class bfs {
                     visited[cur_row][cur_col - 1] = true;
                     int[] p = {cur_row, cur_col - 1};
                     queue.add(p);
-//                    bfs(matrix, cur_row, cur_col - 1);
                 }
             }
             //判断上方
@@ -36,7 +35,6 @@ public class bfs {
                     visited[cur_row - 1][cur_col] = true;
                     int[] p = {cur_row - 1, cur_col};
                     queue.add(p);
-//                    bfs(matrix, cur_row - 1, cur_col);
                 }
             }
 
@@ -47,7 +45,6 @@ public class bfs {
                     visited[cur_row][cur_col + 1] = true;
                     int[] p = {cur_row, cur_col + 1};
                     queue.add(p);
-//                    bfs(matrix, cur_row, cur_col + 1);
                 }
             }
 
@@ -58,7 +55,6 @@ public class bfs {
                     visited[cur_row + 1][cur_col] = true;
                     int[] p = {cur_row + 1, cur_col};
                     queue.add(p);
-//                    bfs(matrix, cur_row + 1, cur_col);
                 }
             }
         }

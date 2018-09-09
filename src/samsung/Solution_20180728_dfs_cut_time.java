@@ -1,6 +1,6 @@
 package samsung;
 
-public class Solution_20180728_bfs_cut_time {
+public class Solution_20180728_dfs_cut_time {
 
     public static int count = 0;
     public static boolean[][] visited;

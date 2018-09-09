@@ -3,7 +3,7 @@ package x2018.toutiao;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class bfs_noqueue {
+public class dfs {
 
     public static boolean[][] visited;
 
@@ -36,7 +36,6 @@ public class bfs_noqueue {
             int right_num = matrix[row][col + 1];
             if (!visited[row][col + 1] && right_num == 1) {
                 visited[row][col + 1] = true;
-
                 bfs(matrix, row, col + 1);
             }
         }
@@ -58,10 +57,10 @@ public class bfs_noqueue {
                 {0, 0, 0, 0}
         };
         int[][] matrix = {{1, 0, 0, 1, 1},
-                {1, 0, 0, 1, 1},
-                {0, 0, 1, 0, 0},
-                {0, 0, 1, 0, 0},
-                {0, 0, 1, 0, 0}
+                          {1, 0, 0, 1, 1},
+                          {0, 0, 1, 0, 0},
+                          {0, 0, 1, 0, 0},
+                          {0, 0, 1, 0, 0}
         };
         int count = 0;
         visited = new boolean[matrix.length][matrix[0].length];
