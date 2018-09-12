@@ -1,4 +1,4 @@
-package x2018;
+package x2018.y_360;
 
 import java.util.Arrays;
 import java.util.Scanner;

@@ -1,4 +1,4 @@
-package x2018;
+package x2018.pinduoduo;
 
 import java.util.Scanner;
 
