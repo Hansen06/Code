@@ -1,10 +1,9 @@
 package basic_class_02;
 
 /**
- * 求最大回文长度
+ * 返回最长回文子串
  */
-
-public class Code_04_Manacher {
+public class Code_04_Manacher_getString {
 
 	public static char[] manacherString(String str) {
 		char[] charArr = str.toCharArray();
@@ -16,10 +15,11 @@ public class Code_04_Manacher {
 		return res;
 	}
 
-	public static int maxLcpsLength(String str) {
+	public static String[] maxLcpsLength(String str) {
 		if (str == null || str.length() == 0) {
-			return 0;
+			return new String[]{"0", null};
 		}
+
 		char[] charArr = manacherString(str);
 		int[] pArr = new int[charArr.length]; //记录回文半径
 		int index = -1;  //记录最右回文边界对应的回文中心
@@ -40,14 +40,37 @@ public class Code_04_Manacher {
 			}
 			max = Math.max(max, pArr[i]);
 		}
-		return max - 1;
+		String sub = getMaxSub(pArr, max, String.valueOf(charArr));
+		return new String[]{String.valueOf(max - 1), sub};
+	}
+
+	public static String getMaxSub(int[] pArr, int len, String str){
+		int centor = 0;
+		int maxN = pArr[0];
+		for (int i = 0; i < pArr.length; i++) {
+			if (pArr[i] > maxN){
+				maxN = pArr[i];
+				centor = i;
+			}
+		}
+		String res = str.substring(centor-len+1, centor + len);
+		StringBuilder sb = new StringBuilder();
+		char[] ch = res.toCharArray();
+		for (int i = 0; i < ch.length; i++) {
+			if (ch[i] != '#'){
+				sb.append(ch[i]);
+			}
+		}
+		return sb.toString();
 	}
 
 	public static void main(String[] args) {
 		String str1 = "abc1234321ab";
 		String str2 = "abc121cba";
-		System.out.println(maxLcpsLength(str1));
-		System.out.println(maxLcpsLength(str2));
+		String[] res1 = maxLcpsLength(str1);
+		String[] res2 = maxLcpsLength(str2);
+		System.out.println(res1[0] + " " + res1[1]);
+		System.out.println(res2[0] + " " + res2[1]);
 	}
 
 }

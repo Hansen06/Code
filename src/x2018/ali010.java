@@ -1,4 +1,8 @@
 package x2018;
+/**
+ * singer_周杰|周杰伦|刘德华|王力宏;song_冰雨|北京欢迎你|七里香;actor_周杰伦|孙俪
+ * 请播放周杰伦的七里香给我听
+ */
 
 import java.util.Arrays;
 import java.util.Scanner;
