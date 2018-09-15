@@ -1,9 +1,9 @@
 package x2018;
 
 import Online.Te;
+import org.omg.CORBA.INTERNAL;
 
-import java.util.Arrays;
-import java.util.Vector;
+import java.util.*;
 
 public class Test {
     public static void main(String[] args) {
@@ -27,12 +27,36 @@ public class Test {
 //            System.out.println(strr[i]);
 //        }
 
-        System.out.println("A");
-        new Test();
-        new Test();
+//        System.out.println("A");
+//        new Test();
+//        new Test();
+
+
+        TreeMap<Integer, Integer> map = new TreeMap<>();
+        map.put(1, 4);
+        map.put(2, 5);
+        map.put(3, 2);
+
+        List<Map.Entry<Integer, Integer>> list = new ArrayList<Map.Entry<Integer, Integer>>(map.entrySet());
+
+        Collections.sort(list, new Comparator<Map.Entry<Integer, Integer>>() {
+            //升序排序
+            public int compare(Map.Entry<Integer, Integer> o1, Map.Entry<Integer, Integer> o2) {
+                return o2.getValue().compareTo(o1.getValue());
+            }
+        });
+        int rank = 0;
+        for (Map.Entry<Integer, Integer> e : list) {
+            System.out.println(e.getKey() + ":" + e.getValue());
+            rank++;
+            if (e.getKey() == 2){
+                System.out.println(rank);
+                break;
+            }
+        }
     }
 
-    public Test(){
+    public Test() {
         System.out.println("B");
     }
 
