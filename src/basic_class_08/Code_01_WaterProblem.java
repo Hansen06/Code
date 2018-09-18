@@ -5,6 +5,7 @@ import java.util.Map.Entry;
 
 public class Code_01_WaterProblem {
 
+	//o(n^2）
 	public static int getWater1(int[] arr) {
 		if (arr == null || arr.length < 3) {
 			return 0;
@@ -24,6 +25,7 @@ public class Code_01_WaterProblem {
 		return value;
 	}
 
+	//辅助数组
 	public static int getWater2(int[] arr) {
 		if (arr == null || arr.length < 3) {
 			return 0;
@@ -65,6 +67,8 @@ public class Code_01_WaterProblem {
 		return value;
 	}
 
+	// o(n)
+	// 从两侧滑动
 	public static int getWater4(int[] arr) {
 		if (arr == null || arr.length < 3) {
 			return 0;
