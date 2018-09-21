@@ -32,28 +32,33 @@ public class Test {
 //        new Test();
 
 
-        TreeMap<Integer, Integer> map = new TreeMap<>();
-        map.put(1, 4);
-        map.put(2, 5);
-        map.put(3, 2);
+//        TreeMap<Integer, Integer> map = new TreeMap<>();
+//        map.put(1, 4);
+//        map.put(2, 5);
+//        map.put(3, 2);
+//
+//        List<Map.Entry<Integer, Integer>> list = new ArrayList<Map.Entry<Integer, Integer>>(map.entrySet());
+//
+//        Collections.sort(list, new Comparator<Map.Entry<Integer, Integer>>() {
+//            //升序排序
+//            public int compare(Map.Entry<Integer, Integer> o1, Map.Entry<Integer, Integer> o2) {
+//                return o2.getValue().compareTo(o1.getValue());
+//            }
+//        });
+//        int rank = 0;
+//        for (Map.Entry<Integer, Integer> e : list) {
+//            System.out.println(e.getKey() + ":" + e.getValue());
+//            rank++;
+//            if (e.getKey() == 2){
+//                System.out.println(rank);
+//                break;
+//            }
+//        }
 
-        List<Map.Entry<Integer, Integer>> list = new ArrayList<Map.Entry<Integer, Integer>>(map.entrySet());
-
-        Collections.sort(list, new Comparator<Map.Entry<Integer, Integer>>() {
-            //升序排序
-            public int compare(Map.Entry<Integer, Integer> o1, Map.Entry<Integer, Integer> o2) {
-                return o2.getValue().compareTo(o1.getValue());
-            }
-        });
-        int rank = 0;
-        for (Map.Entry<Integer, Integer> e : list) {
-            System.out.println(e.getKey() + ":" + e.getValue());
-            rank++;
-            if (e.getKey() == 2){
-                System.out.println(rank);
-                break;
-            }
-        }
+        int a = 6;
+        System.out.println(a);
+        System.out.println(a++);
+        System.out.println(a);
     }
 
     public Test() {
