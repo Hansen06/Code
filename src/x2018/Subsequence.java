@@ -1,8 +1,11 @@
 package x2018;
 
+/**
+ * 掌阅科技面试
+ * 打印一个字符串的所有子串，顺序保持一致
+ */
+
 public class Subsequence {
-
-
 
     public static void main(String[] args) {
         String str = "abcd";
