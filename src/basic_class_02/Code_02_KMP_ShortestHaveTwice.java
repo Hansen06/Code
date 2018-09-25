@@ -14,7 +14,7 @@ public class Code_02_KMP_ShortestHaveTwice {
 			return chas[0] == chas[1] ? (str + String.valueOf(chas[0])) : (str + str);
 		}
 		int endNext = endNextLength(chas);
-
+		System.out.println(str.substring(endNext));
 		return str + str.substring(endNext);
 	}
 
@@ -50,8 +50,8 @@ public class Code_02_KMP_ShortestHaveTwice {
 //		String test3 = "ab";
 //		System.out.println(answer(test3));
 //
-//		String test4 = "abcdabcd";
-//		System.out.println(answer(test4));
+		String test4 = "abcdabcd";
+		System.out.println(answer(test4));
 //
 //		String test5 = "abracadabra";
 //		System.out.println(answer(test5));

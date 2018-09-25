@@ -20,9 +20,9 @@ public class Code_03_KMP_T1SubtreeEqualsT2 {
 
 	public static String serialByPre(Node head) {
 		if (head == null) {
-			return "#!";
+			return "#,";
 		}
-		String res = head.value + "!";
+		String res = head.value + ",";
 		res += serialByPre(head.left);
 		res += serialByPre(head.right);
 		return res;
