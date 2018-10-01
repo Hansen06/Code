@@ -5,6 +5,7 @@ package offer002;
  */
 public class Solution048_longestSubstringWithoutDuplication {
 
+
     public static int longestSubstringWithoutDuplication(String str){
         if (str == null || str.length() < 1){
             return 0;
