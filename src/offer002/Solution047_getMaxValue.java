@@ -2,7 +2,6 @@ package offer002;
 
 public class Solution047_getMaxValue {
 
-
     public static int getMaxValue(int[] matrix, int rows, int cols){
         if (matrix == null || rows < 1 || cols < 1){
             return 0;
