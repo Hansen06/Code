@@ -75,6 +75,7 @@ public class Solution045_PrintMinNumber {
             }
         });
 
+
         for (int i = 0; i < result.length; i++) {
             sb.append(result[i]);
         }
