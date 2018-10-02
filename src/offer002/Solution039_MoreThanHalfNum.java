@@ -44,7 +44,6 @@ public class Solution039_MoreThanHalfNum {
             }
         }
 
-
         //检查是否达到一半
         int num = 0;
         for (int i = 0; i < array.length; i++) {
@@ -97,13 +96,11 @@ public class Solution039_MoreThanHalfNum {
 
         int p = data[end];
         int less = start - 1;
-        for ( int i = start; i < end; i++){
+        for ( int i = start; i <= end; i++){
             if (data[i] <= p ) {
                 swap(data, ++less, i);
             }
         }
-        ++less;
-        swap(data, less, end);
         return less;
     }
 
@@ -114,9 +111,12 @@ public class Solution039_MoreThanHalfNum {
     }
 
     public static void main(String[] args) {
-        int[] arr = {4,2,4,1,4,2};
+        int[] arr = {4,2,4,1,4,2,4};
+        int[] arr1 = {1,2,3,2,2,2,5,4,2};
+        System.out.println(MoreThanHalfNum_Solution(arr));
         System.out.println(MoreThanHalfNum_Solution1(arr));
         System.out.println(MoreThanHalfNum_Solution2(arr));
+        System.out.println(MoreThanHalfNum_Solution2(arr1));
     }
 
 }
