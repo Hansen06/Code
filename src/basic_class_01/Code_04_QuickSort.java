@@ -20,18 +20,18 @@ public class Code_04_QuickSort {
 		}
 	}
 
-    
+
     public static int partition1(int[] arr, int L, int R) {
     	int p = arr[R];
     	int less = L - 1;//小于等于区右边界
     	for (int i = L; i <= R; i++ ) {
     		//如何当前值比划分值小，则和小于区的下一个数互换
-    		if (arr[i] <= p) {         
+    		if (arr[i] <= p) {
     			swap(arr, ++less, i);
     		}
     	}
-    	++less;
-    	swap(arr,less,R);
+//    	++less;
+//    	swap(arr,less,R);
     	return less;
     }
 
@@ -122,8 +122,7 @@ public class Code_04_QuickSort {
 			System.out.print(test[i] + " ");
 		}
 		System.out.println();
-
-
+		System.out.println(index);
 
 		int testTime = 500000;
 		int maxSize = 100;
