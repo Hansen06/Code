@@ -2,27 +2,29 @@ package basic_class_02;
 
 public class Code_03_KMP_T1SubtreeEqualsT2 {
 
-	public static class Node {
-		public int value;
-		public Node left;
-		public Node right;
+	public static class TreeNode {
+		public int val;
+		public TreeNode left;
+		public TreeNode right;
 
-		public Node(int data) {
-			this.value = data;
+		public TreeNode(int x) {
+			this.val = x;
 		}
 	}
 
-	public static boolean isSubtree(Node t1, Node t2) {
-		String t1Str = serialByPre(t1);
-		String t2Str = serialByPre(t2);
+	public static boolean isSubtree(TreeNode s, TreeNode t) {
+		String t1Str = serialByPre(s);
+		String t2Str = serialByPre(t);
+		System.out.println(t1Str);
+		System.out.println(t2Str);
 		return getIndexOf(t1Str, t2Str) != -1;
 	}
 
-	public static String serialByPre(Node head) {
+	public static String serialByPre(TreeNode head) {
 		if (head == null) {
 			return "#,";
 		}
-		String res = head.value + ",";
+		String res = head.val + ",";
 		res += serialByPre(head.left);
 		res += serialByPre(head.right);
 		return res;
@@ -73,21 +75,26 @@ public class Code_03_KMP_T1SubtreeEqualsT2 {
 	}
 
 	public static void main(String[] args) {
-		Node t1 = new Node(1);
-		t1.left = new Node(2);
-		t1.right = new Node(3);
-		t1.left.left = new Node(4);
-		t1.left.right = new Node(5);
-		t1.right.left = new Node(6);
-		t1.right.right = new Node(7);
-		t1.left.left.right = new Node(8);
-		t1.left.right.left = new Node(9);
+//		TreeNode t1 = new TreeNode(1);
+//		t1.left = new TreeNode(2);
+//		t1.right = new TreeNode(3);
+//		t1.left.left = new TreeNode(4);
+//		t1.left.right = new TreeNode(5);
+//		t1.right.left = new TreeNode(6);
+//		t1.right.right = new TreeNode(7);
+//		t1.left.left.right = new TreeNode(8);
+//		t1.left.right.left = new TreeNode(9);
+//
+//		TreeNode t2 = new TreeNode(2);
+//		t2.left = new TreeNode(4);
+//		t2.left.right = new TreeNode(8);
+//		t2.right = new TreeNode(5);
+//		t2.right.left = new TreeNode(9);
 
-		Node t2 = new Node(2);
-		t2.left = new Node(4);
-		t2.left.right = new Node(8);
-		t2.right = new Node(5);
-		t2.right.left = new Node(9);
+		TreeNode t1 = new TreeNode(1);
+		t1.left = new TreeNode(2);
+
+		TreeNode t2 = new TreeNode(2);
 
 		System.out.println(isSubtree(t1, t2));
 
