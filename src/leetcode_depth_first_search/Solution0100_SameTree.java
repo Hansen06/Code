@@ -57,6 +57,12 @@ public class Solution0100_SameTree {
         return isSameTree(p_pre, q_pre);
     }
 
+    /**
+     * 递归
+     * @param p
+     * @param q
+     * @return
+     */
     public static boolean isSameTree1(TreeNode p, TreeNode q) {
         if (p == null && q == null){
             return true;
@@ -65,7 +71,7 @@ public class Solution0100_SameTree {
             return false;
         }
         if (p.val == q.val){
-            return isSameTree(p.left, q.left) && isSameTree(p.right, q.right);
+            return isSameTree1(p.left, q.left) && isSameTree1(p.right, q.right);
         }
         return false;
     }
@@ -83,5 +89,6 @@ public class Solution0100_SameTree {
         root1.left = n11;
         root1.right = n21;
         System.out.println(isSameTree(root, root1));
+        System.out.println(isSameTree1(root, root1));
     }
 }
