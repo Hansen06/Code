@@ -25,10 +25,6 @@ public class Code_04_Manacher_getString {
         int index = -1;  //记录最右回文边界对应的回文中心
         int pR = -1;  //记录回文最右边界
         int max = Integer.MIN_VALUE;
-
-        int max_All = Integer.MIN_VALUE;
-        int max_index = -1;
-
         for (int i = 0; i != charArr.length; i++) {
             pArr[i] = pR > i ? Math.min(pArr[2 * index - i], pR - i) : 1;
             while (i + pArr[i] < charArr.length && i - pArr[i] > -1) {
@@ -44,31 +40,22 @@ public class Code_04_Manacher_getString {
             }
 
             max = Math.max(max, pArr[i]);
-            if (max > max_All) {
-                max_All = max;
-                max_index = index;
-            }
         }
         StringBuilder sb = new StringBuilder();
-        int start = max_index - max_All + 1;
-        for (int i = 0; i < max_All; i++) {
-            sb.append(charArr[2*i+1 + start]);
-        }
-
-//		String sub = getMaxSub(pArr, max, String.valueOf(charArr));
-        return new String[]{String.valueOf(max - 1), sb.toString()};
+        String sub = getMaxSub(pArr, max, String.valueOf(charArr));
+        return new String[]{String.valueOf(max - 1), sub};
     }
 
     public static String getMaxSub(int[] pArr, int len, String str) {
-        int centor = 0;
+        int center = 0;
         int maxN = pArr[0];
         for (int i = 0; i < pArr.length; i++) {
             if (pArr[i] > maxN) {
                 maxN = pArr[i];
-                centor = i;
+                center = i;
             }
         }
-        String res = str.substring(centor - len + 1, centor + len);
+        String res = str.substring(center - len + 1, center + len);
         StringBuilder sb = new StringBuilder();
         char[] ch = res.toCharArray();
         for (int i = 0; i < ch.length; i++) {
