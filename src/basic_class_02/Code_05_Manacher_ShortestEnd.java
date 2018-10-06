@@ -12,6 +12,11 @@ public class Code_05_Manacher_ShortestEnd {
 		return res;
 	}
 
+	/**
+	 * 找到包含最后一个字符的最长回文串，把前面不是的逆序添加到后面即可
+	 * @param str
+	 * @return
+	 */
 	public static String shortestEnd(String str) {
 		if (str == null || str.length() == 0) {
 			return null;
@@ -34,11 +39,12 @@ public class Code_05_Manacher_ShortestEnd {
 				pR = i + pArr[i];
 				index = i;
 			}
-			if (pR == charArr.length) {
+			if (pR == charArr.length) { //判断回文半径是否到达最右边界，到达则结束
 				maxContainsEnd = pArr[i];
 				break;
 			}
 		}
+        System.out.println(maxContainsEnd);
 		char[] res = new char[str.length() - maxContainsEnd + 1];
 		for (int i = 0; i < res.length; i++) {
 			res[res.length - 1 - i] = charArr[i * 2 + 1];

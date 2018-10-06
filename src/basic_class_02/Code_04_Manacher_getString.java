@@ -25,6 +25,7 @@ public class Code_04_Manacher_getString {
         int index = -1;  //记录最右回文边界对应的回文中心
         int pR = -1;  //记录回文最右边界
         int max = Integer.MIN_VALUE;
+        int max_pos = Integer.MIN_VALUE;
         for (int i = 0; i != charArr.length; i++) {
             pArr[i] = pR > i ? Math.min(pArr[2 * index - i], pR - i) : 1;
             while (i + pArr[i] < charArr.length && i - pArr[i] > -1) {
@@ -39,22 +40,23 @@ public class Code_04_Manacher_getString {
                 index = i; // 更新回文中心
             }
 
-            max = Math.max(max, pArr[i]);
+            max = Math.max(max, pArr[i]); //最大回文长度
+            max_pos = Math.max(max_pos, i);//最大回文对应的中心
         }
         StringBuilder sb = new StringBuilder();
-        String sub = getMaxSub(pArr, max, String.valueOf(charArr));
+        String sub = getMaxSub1(pArr, max, max_pos, String.valueOf(charArr));
         return new String[]{String.valueOf(max - 1), sub};
     }
 
-    public static String getMaxSub(int[] pArr, int len, String str) {
-        int center = 0;
-        int maxN = pArr[0];
-        for (int i = 0; i < pArr.length; i++) {
-            if (pArr[i] > maxN) {
-                maxN = pArr[i];
-                center = i;
-            }
-        }
+    /**
+     * 取得最长回文子串
+     * @param pArr
+     * @param len
+     * @param center
+     * @param str
+     * @return
+     */
+    public static String getMaxSub1(int[] pArr, int len, int center, String str) {
         String res = str.substring(center - len + 1, center + len);
         StringBuilder sb = new StringBuilder();
         char[] ch = res.toCharArray();
