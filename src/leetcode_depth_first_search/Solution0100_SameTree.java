@@ -54,6 +54,7 @@ public class Solution0100_SameTree {
         ArrayList<String> q_pre = new ArrayList<>();
         preTraverse(p, p_pre);
         preTraverse(q, q_pre);
+//        return p_pre.equals(q_pre); // 调用系统函数
         return isSameTree(p_pre, q_pre);
     }
 
