@@ -30,6 +30,7 @@ public class Solution0110_BalancedBinaryTree {
         return isBalanced(root.left) && isBalanced(root.right);
     }
 
+
     public int hightTree(TreeNode root) {
         if (root == null){
             return 0;
