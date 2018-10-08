@@ -4,7 +4,7 @@ package offer003;
  * 序列化二叉树
  */
 public class Solution037_Serialize_Deserialize {
-    public class TreeNode {
+    public static class TreeNode {
         int val = 0;
         TreeNode left = null;
         TreeNode right = null;
@@ -14,8 +14,8 @@ public class Solution037_Serialize_Deserialize {
 
         }
     }
-    public int index = -1;
-    String Serialize(TreeNode root) {
+    public static int index = -1;
+    public static String Serialize(TreeNode root) {
         StringBuffer ser = new StringBuffer();
         if (root == null){
             ser.append("#,");
@@ -27,7 +27,7 @@ public class Solution037_Serialize_Deserialize {
         return ser.toString();
     }
 
-    TreeNode Deserialize(String str) {
+    public static TreeNode Deserialize(String str) {
         index++;
         int len = str.length();
         if (index >= len){
@@ -42,4 +42,24 @@ public class Solution037_Serialize_Deserialize {
         }
         return node;
     }
+
+    public static void main(String[] args) {
+        TreeNode root  = new TreeNode(1);
+        TreeNode root_left  = new TreeNode(2);
+        TreeNode root_right = new TreeNode(3);
+        TreeNode root_left_left  = new TreeNode(4);
+        TreeNode root_left_right  = new TreeNode(5);
+        root.left = root_left;
+        root.right = root_right;
+        root_left.left = root_left_left;
+        root_left.right = root_left_right;
+
+        String res  = Serialize(root);
+        System.out.println(res);
+
+        TreeNode node = Deserialize(res);
+        System.out.println(Serialize(node));
+
+    }
+
 }
