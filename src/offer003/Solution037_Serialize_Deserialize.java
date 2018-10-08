@@ -43,6 +43,21 @@ public class Solution037_Serialize_Deserialize {
         return node;
     }
 
+    public static TreeNode Deserialize1(String[] strr) {
+        index++;
+        int len = strr.length;
+        if (index >= len){
+            return null;
+        }
+        TreeNode node = null;
+        if (!strr[index].equals("#")){
+            node = new TreeNode(Integer.valueOf(strr[index]));
+            node.left = Deserialize1(strr);
+            node.right = Deserialize1(strr);
+        }
+        return node;
+    }
+
     public static void main(String[] args) {
         TreeNode root  = new TreeNode(1);
         TreeNode root_left  = new TreeNode(2);
@@ -57,7 +72,7 @@ public class Solution037_Serialize_Deserialize {
         String res  = Serialize(root);
         System.out.println(res);
 
-        TreeNode node = Deserialize(res);
+        TreeNode node = Deserialize1(res.split(","));
         System.out.println(Serialize(node));
 
     }
