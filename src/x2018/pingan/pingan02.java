@@ -1,7 +1,5 @@
 package x2018.pingan;
 
-import java.util.Arrays;
-import java.util.Comparator;
 import java.util.Scanner;
 
 public class pingan02 {
@@ -26,8 +24,9 @@ public class pingan02 {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-
-        System.out.println(decompose(n));
+        while (sc.hasNextInt()) {
+            int n = sc.nextInt();
+            System.out.println(decompose(n));
+        }
     }
 }
