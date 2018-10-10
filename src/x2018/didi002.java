@@ -13,6 +13,8 @@ package x2018;
  * 这个答案可能很大，只需要输出它对质数(1e9 + 7)取模的结果即可
  */
 
+// https://blog.csdn.net/x_iya/article/details/78536132
+
 import java.util.Scanner;
 
 public class didi002 {
