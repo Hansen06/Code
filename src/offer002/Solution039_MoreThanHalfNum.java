@@ -5,6 +5,11 @@ package offer002;
  */
 public class Solution039_MoreThanHalfNum {
 
+    /**
+     * 桶思想 以空间换时间
+     * @param array
+     * @return
+     */
     public static int MoreThanHalfNum_Solution(int [] array) {
 
         Integer result = 0;
@@ -23,6 +28,12 @@ public class Solution039_MoreThanHalfNum {
         }
         return result;
     }
+
+    /**
+     *
+     * @param array
+     * @return
+     */
     public static int MoreThanHalfNum_Solution1(int [] array) {
 
         Integer result = 0;
@@ -57,6 +68,11 @@ public class Solution039_MoreThanHalfNum {
         return result;
     }
 
+    /**
+     * partition的思想，出现超过一半的数字必出现在中间位置
+     * @param array
+     * @return
+     */
     public static int MoreThanHalfNum_Solution2(int [] array) {
 
         Integer result = 0;
@@ -113,10 +129,10 @@ public class Solution039_MoreThanHalfNum {
     public static void main(String[] args) {
         int[] arr = {4,2,4,1,4,2,4};
         int[] arr1 = {1,2,3,2,2,2,5,4,2};
-        System.out.println(MoreThanHalfNum_Solution(arr));
-        System.out.println(MoreThanHalfNum_Solution1(arr));
+//        System.out.println(MoreThanHalfNum_Solution(arr));
+//        System.out.println(MoreThanHalfNum_Solution1(arr));
         System.out.println(MoreThanHalfNum_Solution2(arr));
-        System.out.println(MoreThanHalfNum_Solution2(arr1));
+//        System.out.println(MoreThanHalfNum_Solution2(arr1));
     }
 
 }
