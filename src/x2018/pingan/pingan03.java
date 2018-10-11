@@ -2,6 +2,9 @@ package x2018.pingan;
 
 import java.util.Scanner;
 
+/**
+ * 三个数排序
+ */
 public class pingan03 {
 
     public static void main(String[] args) {

@@ -4,6 +4,9 @@ import java.util.Arrays;
 import java.util.Comparator;
 import java.util.Scanner;
 
+/**
+ * 把数组排成最小的数
+ */
 public class pingan01 {
 
     public static String PrintMinNumber(int [] numbers) {

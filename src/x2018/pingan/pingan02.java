@@ -2,6 +2,9 @@ package x2018.pingan;
 
 import java.util.Scanner;
 
+/**
+ * 分解质因数
+ */
 public class pingan02 {
 
     private static String decompose(int n) {

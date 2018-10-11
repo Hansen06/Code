@@ -2,6 +2,9 @@ package x2018.pingan;
 
 import java.util.Scanner;
 
+/**
+ * 给定日期，判断是当年的第几天
+ */
 public class pingan04 {
 
     public static int judge(int year, int month, int date) {
