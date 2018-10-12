@@ -60,10 +60,32 @@ public class Solution009_Palindrome_Number {
         return true;
     }
 
+    /**
+     * 转为char数组，从两边对比
+     * @param x
+     * @return
+     */
+    public static boolean isPalindrome2(int x) {
+        if (x < 0){
+            return false;
+        }
+        String s = String.valueOf(x);
+        char[] ch = s.toCharArray();
+        int l = -1;
+        int r = s.length();
+        while (++l < --r) {
+            if (ch[l] != ch[r]) {
+                return false;
+            }
+        }
+        return true;
+    }
+
     public static void main(String[] args) {
         int x = 122;
         System.out.println(isPalindrome(x));
-        System.out.println(isPalindrome(x));
+        System.out.println(isPalindrome1(x));
+        System.out.println(isPalindrome2(x));
     }
 
 }
