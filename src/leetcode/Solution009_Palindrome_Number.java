@@ -40,8 +40,29 @@ public class Solution009_Palindrome_Number {
         return true;
     }
 
+    /**
+     * 从两侧往中间走
+     * @param x
+     * @return
+     */
+    public static boolean isPalindrome1(int x) {
+        if (x < 0){
+            return false;
+        }
+        String s = String.valueOf(x);
+        int l = -1;
+        int r = s.length();
+        while (++l < --r) {
+            if (s.charAt(l) != s.charAt(r)) {
+                return false;
+            }
+        }
+        return true;
+    }
+
     public static void main(String[] args) {
         int x = 122;
+        System.out.println(isPalindrome(x));
         System.out.println(isPalindrome(x));
     }
 

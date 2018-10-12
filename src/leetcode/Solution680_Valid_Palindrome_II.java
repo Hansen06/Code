@@ -68,10 +68,11 @@ public class Solution680_Valid_Palindrome_II {
     public static boolean validPalindrome1(String s) {
         int l = -1;
         int r = s.length();
-        while (++l < --r)
+        while (++l < --r) {
             if (s.charAt(l) != s.charAt(r)) {
                 return isPalindromic(s, l, r + 1) || isPalindromic(s, l - 1, r);
             }
+        }
         return true;
     }
 
