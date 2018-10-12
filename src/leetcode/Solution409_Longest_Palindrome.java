@@ -8,6 +8,11 @@ import com.sun.xml.internal.ws.api.ha.StickyFeature;
 public class Solution409_Longest_Palindrome {
 
 
+    /**
+     * 次数为偶数，直接相加，为奇数，除以2乘以2，然后+1
+     * @param s
+     * @return
+     */
     public static int longestPalindrome(String s) {
         if (s == null || s.length() < 1) {
             return 0;
@@ -31,6 +36,11 @@ public class Solution409_Longest_Palindrome {
         }
     }
 
+    /**
+     * hash 计算每个字母出现的次数
+     * @param s
+     * @return
+     */
     private static int[] getMap(String s) {
         int[] res = new int[256];
         for (int i = 0; i < s.length(); i++) {
