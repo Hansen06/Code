@@ -40,24 +40,25 @@ public class Code_04_Manacher_getString {
                 index = i; // 更新回文中心
             }
 
-            max = Math.max(max, pArr[i]); //最大回文长度
-            max_pos = Math.max(max_pos, i);//最大回文对应的中心
+            if (max <= pArr[i]){
+                max = pArr[i];
+                max_pos = i;
+            }
         }
         StringBuilder sb = new StringBuilder();
-        String sub = getMaxSub1(pArr, max, max_pos, String.valueOf(charArr));
+        String sub = getMaxSub1(max, max_pos, String.valueOf(charArr));
         return new String[]{String.valueOf(max - 1), sub};
     }
 
     /**
      * 取得最长回文子串
-     * @param pArr
      * @param len
      * @param center
      * @param str
      * @return
      */
-    public static String getMaxSub1(int[] pArr, int len, int center, String str) {
-        String res = str.substring(center - len + 1, center + len);
+    public static String getMaxSub1(int len, int center, String str) {
+        String res = str.substring(center - len + 1, center + len-1);
         StringBuilder sb = new StringBuilder();
         char[] ch = res.toCharArray();
         for (int i = 0; i < ch.length; i++) {
