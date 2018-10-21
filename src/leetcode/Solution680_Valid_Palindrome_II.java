@@ -64,7 +64,6 @@ public class Solution680_Valid_Palindrome_II {
         }
         return true;
     }
-
     public static boolean validPalindrome1(String s) {
         int l = -1;
         int r = s.length();
