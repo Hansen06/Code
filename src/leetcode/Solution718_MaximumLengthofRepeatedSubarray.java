@@ -19,6 +19,7 @@ public class Solution718_MaximumLengthofRepeatedSubarray {
         return max;
     }
 
+
     public static void main(String[] args) {
         int[] A = {1, 2, 3, 2, 1};
         int[] B = {3, 2, 1, 4, 7};
