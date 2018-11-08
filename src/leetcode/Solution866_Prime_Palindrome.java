@@ -26,6 +26,7 @@ public class Solution866_Prime_Palindrome {
         return -1;
     }
 
+
     private static boolean isPrime(int x) {
         if (x < 2 || x % 2 == 0) {
             return x == 2;
