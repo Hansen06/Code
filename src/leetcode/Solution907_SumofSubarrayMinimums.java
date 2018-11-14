@@ -19,6 +19,7 @@ public class Solution907_SumofSubarrayMinimums {
         if (arr == null || w < 1 || arr.length < w) {
             return null;
         }
+
         LinkedList<Integer> qmax = new LinkedList<Integer>();
         int[] res = new int[arr.length - w + 1];
         int index = 0;
